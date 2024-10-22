@@ -27,3 +27,4 @@ select pilnom,count(volpilid) compteur,aviid,modnom from pilotes left join vols 
 select count(*) compteur from pilotes inner join vols on volpilid=PilID group by pilid having compteur>5;
 select PilNom,count(*) compteur from pilotes inner join vols on volpilid=PilID group by pilid having compteur>=5;
 select aviid from avions left join vols on volaviid=aviid where aviid not in (select volaviid from vols)
+select * from pilotes
