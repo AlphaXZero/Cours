@@ -1,0 +1,5 @@
+select hordate from horaires inner join spectacles on speid=horspeid inner join salles on salid=spesalid where salnom="Forest National"
+select salnom from salles where salcapacite = (select max(salcapacite) from salles)
+select artnom from artistes left join spectacles on artid=speartid left join salles on spesalid=salid where artnom not in (select artnom from artistes left join spectacles on artid=speartid left join salles on spesalid=salid where salnom="forest national")
+select bilvendu,count(bilvendu) from spectacles inner join artistes on speartid=artid inner join horaires on speid=horspeid inner join typeplaces on typhorid=horid inner join billets on biltypid=typid where artnom="Cédric Gervy" and hordate="2014-10-06" group by bilvendu
+select hordate,spetitre,bilvendu,count(bilvendu) cont from spectacles inner join artistes on speartid=artid inner join horaires on speid=horspeid inner join typeplaces on typhorid=horid inner join billets on biltypid=typid  group by hordate,spetitre,bilvendu;
