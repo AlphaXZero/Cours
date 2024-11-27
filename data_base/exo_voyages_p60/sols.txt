@@ -1,0 +1,12 @@
+select avg(clisolde) from stations inner join sejours on staid=sejstaid inner join clients on sejcliid=cliid where lower(stanom)="club soleil fluo"
+select stanom,count(distinct sejcliid) from stations inner join sejours on staid=sejstaid group by staid;
+select actlibelle,actprix,stanom from activites inner join stations on staid=actstaid inner join sejours on staid=sejstaid inner join clients on sejcliid=cliid where clinom="Aire" and actprix<150 order by actlibelle;
+select stanom,stacapacite,vilnom,paynom,connom,statarif from stations left join activites on actstaid=staid left join villes on vilid=stavilid left join pays on payid=vilpayid left join continents on conid=payconid where actid is null
+select clinom,count(*) as comp from clients inner join sejours on cliid=sejcliid group by clinom having comp>3
+select clinom,cliprenom from clients where cliid not in (select sejcliid from sejours left join stations on sejstaid=staid where lower(stanom)="village vacances choucroute");
+select actlibelle,actprix from activites where actprix =(select max(actprix) from activites inner join stations on staid=actstaid where lower(stanom)="resort banana paradise");
+select clinom,clisolde from clients where clisolde=(select max(clisolde) from clients);
+select stanom, avg(datediff(sejfin,sejdebut)) as moy from stations inner join sejours on staid=sejstaid  group by stanom having moy = (select avg(datediff(sejfin,sejdebut)) as moy2 from stations inner join sejours on staid=sejstaid group by stanom order by moy2 desc limit 1);
+select stanom,avg(actprix) moy from stations inner join activites on actstaid=staid group by stanom having moy>100;
+select actlibelle,count(actlibelle) counter from stations inner join activites on actstaid=staid group by actlibelle having counter>1;
+select sejid,sejnbplaces,clinom from sejours inner join clients on sejcliid=cliid where sejnbplaces = (select max(sejnbplaces) from sejours);
