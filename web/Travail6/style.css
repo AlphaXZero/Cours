@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+html{
+    background-image: url("images/nature-background.jpg");
+    margin:0;
+    padding:0;
+    background-repeat:no-repeat; 
+    background-position:center center; 
+    background-attachment:fixed; 
+    background-size: cover; 
+}
+
+body{
+    color: hsl(76, 22%, 48%);
+    font-family: "Afacad Flux", sans-serif;
+}
+main{
+    background:  url("images/bg-mid_haut.png") top no-repeat,
+        url("images/bg-mid_bas.png") bottom no-repeat,
+        url("images/logo_transparent.png") 100% 80% no-repeat;
+    background-size: contain,contain,25%;
+    background-color: hsla(120, 27%, 94%, 0.726);
+    border: 0.1em solid hsl(128, 100%, 30%);
+    padding: 10% 1.5em;
+    min-height: 400px;
+    width: 80%;
+    margin: 2em auto;
+}
+h1{
+    font-size: 1.5em
+}
+a{
+    color: hsl(76, 22%, 48%);
+}

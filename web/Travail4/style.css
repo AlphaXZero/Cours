@@ -1,0 +1,49 @@
+body{
+    margin-left: 2em;
+    font-size: 1.5em;
+}
+figure{
+    margin-left: 0px;
+ 
+}
+img{
+    border: solid blueviolet;
+}
+h2,h3{
+    margin-top: 2em;
+    color: blueviolet;
+}
+nav{
+    font-weight:900;
+    
+}
+a{
+    color: blueviolet;
+    font-weight: 900;
+}
+table{
+    border: solid blueviolet;
+    padding: 2%;
+    margin-left: 2em;
+}
+tr, td{
+    border: 0;
+}
+th{
+    border: solid;
+    border-left-color: blueviolet;
+    border-right-color: blueviolet;
+}
+legend{
+    font-weight: bolder;
+}
+fieldset{
+    border: solid blueviolet;
+    margin-top: 1em;
+}
+#avis{
+    margin-bottom: 1em;
+}
+fieldset fieldset{
+    border: 0em;
+}

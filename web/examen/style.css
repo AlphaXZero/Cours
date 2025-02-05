@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --b-color: rgb(120, 0, 0);
+    --bg2-color : rgb(174, 105, 103);
+    --bg-color: rgb(253, 245, 244);
+    --titre-color: rgb(203, 184, 156);
+    --text-color: rgb(27, 6, 6);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+}
+
+header {
+    font-family: "Pacifico", cursive;
+    color: var(--titre-color);
+}
+
+.letterhead {
+    display: flex;
+    background-color: var(--bg-color);
+}
+
+nav {
+    padding: 0.3em 0;
+    font-family: "Pacifico", cursive;
+    font-size: 1.6em;
+    color: var(--titre-color);
+    background-color: var(--bg2-color);
+}
+
+nav ul {
+    margin: 0;
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 1px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--titre-color) ;
+}
+
+main {
+    padding: 2em 0 3em 0;
+    margin: 0;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--bg-color);
+}
+
+
+#imagechambre figure{
+    margin: 0;
+    padding:0;
+}
+
+
+a {color: var(--b-color);}
+
+article {
+    margin: 0em 2em 0 3em;
+    width: 85%;
+}
+
+article h1 {
+    font-size: 1.8em;
+    color: var(--b-color);
+    width: 100%;
+    flex-direction: column;
+}
+
+
+section figure {
+    margin: 0;
+    padding: 0;
+}
+
+main aside {
+    font-family: "Pacifico",cursive;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 15%;
+}
+
+main aside legend{
+    font-size: 1.5em;
+    color: var(--b-color);
+}
+
+main aside label{
+    font-size: 1.1em;
+    color: var(--titre-color);
+}
+
+form input{
+    margin-top: 0.4em;
+    margin-bottom: 1em;
+    width: 98%;
+}
+
+form textarea{
+    margin-top: 0.4em;
+}
+
+
+footer {
+    padding: 2em 0 4em 0;
+    text-align: center;
+    color: var(--titre-color);
+    background-color: var(--bg2-color);
+}
+footer h1{
+    margin-left: 1.5em;
+}

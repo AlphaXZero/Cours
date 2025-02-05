@@ -1,0 +1,10 @@
+select livtitre, autnom, autprenom from livres left join auteurs on livautid=autid order by livtitre;
+select livtitre, autnom, pernom from livres inner join auteurs on livautid=autid inner join emprunts on emplivid=livid inner join personnes on empperid=perid;
+select pernom,empid from personnes left join emprunts on perid=empperid;
+select livtitre from livres where lower(livtitre) like "%nuit%" or lower(livtitre) like "%noire%";
+select livtitre from livres where lower(livtitre) like "%nuit%" and lower(livtitre) like "%noire%";
+select pernom,pertelephone from personnes UNION select edinom,editelephone from editeurs;
+SELECT PerNom FROM personnes, auteurs WHERE PerNom=AutNom
+select livtitre from livres left join emprunts on emplivid=livid where empid is null;
+select distinct livtitre from livres inner join emprunts on emplivid=livid where datediff(empdaterendu,empdatepret) <=15;
+SELECT LivTitre, PerNom,PerPrenom, count(LivID) FROM livres INNER JOIN Emprunts ON EmpLivID=LivID INNER JOIN Personnes ON EmpPerID=PerID GROUP BY livtitre, pernom,perprenom Having count(LivID)>1;

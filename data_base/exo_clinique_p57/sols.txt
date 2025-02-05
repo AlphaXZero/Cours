@@ -1,0 +1,8 @@
+SELECT distinct patnom,patprenom from patients left join visites on patid=vispatid left join types on vistypid=typid where patnom not in (SELECT patnom from patients left join visites on patid=vispatid left join types on vistypid=typid where typnom="grippe");
+select patsexe,count(*) from patients inner join visites on patid=vispatid where visheure < "12:00:00" group by patsexe;
+select distinct patnom,typnom, typdescription from patients inner join visites on patid=vispatid inner join types on typid=vistypid;
+select vilnom from villes where vilpopulation = (SELECT max(VilPopulation) from villes);
+select patnom, patprenom from patients inner join villes on patvilid=vilid where vilnom like "wavre" order by patnom desc
+select patnom from patients left join visites on patid=vispatid where visdate is null
+select patnom,patnaissance from patients where year(patnaissance) <2000;
+select PatPrenom, count(*) as cont from patients inner join visites on patid=vispatid inner join types on typid=vistypid where typnom="grippe" group by  patprenom having cont = (select count(*) from patients inner join visites on patid=vispatid inner join types on typid=vistypid where typnom="grippe" and patprenom = "Jacques") and patprenom !="Jacques"

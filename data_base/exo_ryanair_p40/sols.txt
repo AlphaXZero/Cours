@@ -1,0 +1,29 @@
+SELECT * FROM pilotes
+SELECT PilNom,PilPrenom from pilotes;
+SELECT VilID,VilNom FROM villes;
+SELECT PilNom from Pilotes where PilSalaire>25000;
+SELECT PilNom from Pilotes where PilSalaire>=20000 and PilSalaire <=25000;
+select ModNom,Modvitesse from modeles where ModNom LIKE 'B%';
+SELECT PilNom FROM pilotes WHERE PilSalaire IS NULL;
+SELECT VilNom from villes inner join Vols ON VilID=VolDepartVilID;
+SELECT PilNom from pilotes INNER join villes ON PilVilID=VilID WHERE VilNom LIKE '%Paris%';
+SELECT avinombredeplaces from avions inner join modeles on avimodid=modid where modnom like "A%";
+SELECT volId from vols inner join villes vd on volDepartvilid=vd.vilid inner join villes va on volarrivevilid=va.vilid where vd.vilnom="Nice" and va.VilNom="Paris"
+SELECT aviid,modnom from avions inner join modeles on avimodid=modid inner JOIN villes on avivilid=vilid where vilNom="Paris" or avinombredeplaces>250
+select volid,vilnom,volheuredepart from vols inner join villes on voldepartvilid=vilid where vilnom="Paris" and volheurearrive<="15:00:00"
+SELECT avg(PilSalaire) from pilotes inner join villes on pilvilid=vilid where vilnom="Paris"
+select count(VolID) from vols inner join villes on VolDepartVilID=vilid where vilnom="Paris"
+SELECT DISTINCT pilnom from vols inner join pilotes on volpilid=pilid inner join villes on voldepartvilid=vilid where vilnom="Paris"
+SELECT DISTINCT pilnom from vols inner join pilotes on volpilid=pilid inner join villes on voldepartvilid=vilid inner join avions on volaviid=aviid inner join modeles on avimodid=modid where vilnom="Paris" and modnom like "A%"
+SELECT aviid from avions where avivilid=(select avivilid from avions where aviid=3);
+SELECT pilnom,pilsalaire from pilotes where pilsalaire > (SELECT avg(PilSalaire) from pilotes);
+select pilnom,pilsalaire from pilotes where pilsalaire=(SELECT MIN(pilsalaire) from pilotes);
+SELECT PilNom, PilSalaire from pilotes inner join villes on pilvilid=vilid where vilnom="Nice" and pilsalaire>(SELECT max(PilSalaire) from pilotes inner join villes on pilvilid=vilid where vilnom="Paris");
+SELECT PilNom, PilSalaire from pilotes inner join villes on pilvilid=vilid where vilnom="Nice" and pilsalaire>(SELECT min(PilSalaire) from pilotes inner join villes on pilvilid=vilid where vilnom="Paris");
+select pilnom from pilotes where (pilsalaire,pilvilid)=(select pilsalaire,pilvilid from pilotes where pilnom="TIM") and pilnom!="TIM";
+select * from pilotes ORDER by PilSalaire desc,PilNom
+select pilnom,count(volpilid) from pilotes left join vols on volpilid=PilID group by pilid order by count(volpilid) desc
+select pilnom,count(volpilid) compteur,aviid,modnom from pilotes left join vols on volpilid=PilID left join avions on volaviid=aviid left join modeles on avimodid=modid group by aviid,modnom,pilnom order by compteur desc
+select count(*) compteur from pilotes inner join vols on volpilid=PilID group by pilid having compteur>5;
+select PilNom,count(*) compteur from pilotes inner join vols on volpilid=PilID group by pilid having compteur>=5;
+select aviid from avions where aviid not in (select volaviid from vols)

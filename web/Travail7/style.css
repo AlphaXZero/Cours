@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --b-color: rgb(170, 187, 68);
+    --bg-color: rgb(255, 255, 255);
+    --bg2-color: rgba(244, 248, 232, 0.767);
+    --f-color: rgb(170, 187, 68);
+}
+
+body {
+    margin: 1vw 15vw;
+    border: 5px solid var(--b-color);
+    background-image: url("images/nature-background.jpg");
+    background-size: cover;
+}
+
+header {
+    font-family: "Pacifico", cursive;
+    color: var(--f-color);
+}
+
+header img {
+    margin-right: 2em;
+}
+
+.letterhead {
+    display: flex;
+    background-color: var(--bg-color);
+}
+
+.txt-header h1 {
+    margin-top: 1.5em;
+    font-size: 2.5em;
+}
+
+.txt-header h2 {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+.txt-header h2:last-child {
+    margin-top: 0;
+}
+
+nav {
+    padding: 0.4em 0;
+    border-block: 2px solid rgba(170, 187, 68, 255);
+    font-family: "Pacifico", cursive;
+    font-size: 1.4em;
+    color: var(--f-color);
+    background-color: var(--bg2-color);
+}
+
+nav ul {
+    margin: 0;
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 1px;
+    list-style-type: none;
+}
+
+main {
+    padding: 2em 0;
+    margin: 0;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    background-color: var(--bg-color);
+}
+
+.main {
+    margin: 0em 2em 0 3em;
+    text-align: justify;
+    width: 75%;
+}
+
+.main h1 {
+    font-size: 1.8em;
+    color: var(--f-color);
+}
+
+main aside {
+    padding-right: 2em;
+    margin-right: 0;
+    word-spacing: 0.5em;
+    text-align: justify;
+    width: 25%;
+}
+
+main aside h1 {
+    padding-top: 0.4em;
+    border-bottom: 2px solid var(--b-color);
+    font-size: 1.4em;
+    word-spacing: 0.1em;
+    color: var(--f-color);
+}
+
+footer {
+    padding: 2em 0 4em 0;
+    border-block: 2px solid rgba(170, 187, 68, 255);
+    text-align: center;
+    color: var(--f-color);
+    background-color: var(--bg2-color);
+}

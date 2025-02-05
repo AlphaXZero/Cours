@@ -1,0 +1,6 @@
+select mainom from maisons left join personnages on permaiid=maiid where perid is null
+select mainom, count(*) from maisons left join personnages on permaiid=maiid group by maiid
+select * from (select mainom,maiid,count(*) as cf from maisons inner join personnages on permaiid=maiid where persexe ="f" group by maiid,persexe) as t2 inner join (select maiid as t1id, count(*) as ch from maisons inner join personnages on permaiid=maiid where persexe ="h" group by maiid,persexe) as t1 on t1id=maiid where cf>ch;
+select pernom,perprenom,mainom from personnages inner join rolesimportants on rolperid=perid inner join films on rolfilid=filid inner join maisons on maiid=permaiid where filannee=2006;
+select pernom,perprenom from personnages inner join rolesimportants on rolperid=perid inner join films on rolfilid=filid where filcout=( select max(filcout) from films);
+select mainom,maidatecreation,datediff(now(),maidatecreation) as temps_ecoule_depuis_sortie from maisons order by temps_ecoule_depuis_sortie desc;
