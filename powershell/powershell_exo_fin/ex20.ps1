@@ -1,0 +1,1 @@
+Get-ChildItem C:\Windows -recurse -ErrorAction SilentlyContinue -Exclude "*.exe"

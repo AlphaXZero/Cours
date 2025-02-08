@@ -1,0 +1,1 @@
+Get-ChildItem c:\ -Hidden -file -recurse -ErrorAction SilentlyContinue| Where-Object {$_.Attributes -notmatch "System"}

@@ -1,0 +1,1 @@
+Get-Location -Stackname Move

@@ -1,0 +1,1 @@
+Get-ChildItem c:\windows\*.exe -Recurse -ErrorAction SilentlyContinue

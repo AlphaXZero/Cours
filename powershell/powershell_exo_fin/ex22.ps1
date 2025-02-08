@@ -1,0 +1,1 @@
+Get-ChildItem $home\appdata -Recurse -Depth 2 -file -hidden
