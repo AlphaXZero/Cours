@@ -1,0 +1,1 @@
+New-Item $HOME\gvanderveen\Toto\Musique, $home\gvanderveen\toto\Images\Travail,$home\gvanderveen\toto\Images\Original,$home\gvanderveen\toto\Images\Jpg, $home\gvanderveen\toto\Documents\Perso,$home\gvanderveen\toto\Documents\Divers -ItemType Directory 

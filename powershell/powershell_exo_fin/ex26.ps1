@@ -1,0 +1,1 @@
+New-Item $HOME\Documents\gvanderveen\toto,$HOME\Documents\gvanderveen\tata,$HOME\Documents\gvanderveen\tutu -ItemType Directory
