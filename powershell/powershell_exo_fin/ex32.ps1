@@ -1,0 +1,1 @@
+Get-Alias -Name g*

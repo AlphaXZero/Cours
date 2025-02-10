@@ -1,0 +1,1 @@
+New-Item $HOME\desktop -ItemType SymbolicLink -Target $home\Documents\maison

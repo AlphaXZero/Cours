@@ -1,0 +1,1 @@
+Remove-Item $home\gvanderveen\toto -Confirm

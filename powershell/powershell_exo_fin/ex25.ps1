@@ -1,1 +1,1 @@
-New-Item -Path $home\Documents -Value Gvanderveen -ItemType Directory
+New-Item -Path $home\Documents\gvanderveen -ItemType Directory

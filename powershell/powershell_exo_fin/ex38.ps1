@@ -1,0 +1,1 @@
+New-Item $home\Documents\maison -ItemType Directory

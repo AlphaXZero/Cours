@@ -1,0 +1,1 @@
+Get-ChildItem *.log -recurse -ErrorAction SilentlyContinue | Add-Content $home\desktop\loglog.log

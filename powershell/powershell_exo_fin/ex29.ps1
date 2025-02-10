@@ -1,0 +1,1 @@
+Start-Transcript $HOME\desktop\trans.txt
