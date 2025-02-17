@@ -1,1 +1,1 @@
-Get-ChildItem c:\*.jpg -recurse -ErrorAction SilentlyContinue | ForEach-Object {copy-item $_.FullName $home\Desktop\Backup\Images}
+New-Item $home\Desktop\Backup\Images -ItemType Directory ; Get-ChildItem c:\*.jpg -recurse -ErrorAction SilentlyContinue | ForEach-Object {copy-item $_.FullName $home\Desktop\Backup\Images}
