@@ -1,0 +1,1 @@
+Get-Service fhsvc | Select-Object Status, DisplayName
