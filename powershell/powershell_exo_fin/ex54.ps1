@@ -1,0 +1,1 @@
+Get-ChildItem c:\Windows -recurse -ErrorAction SilentlyContinue | Sort-Object Length
