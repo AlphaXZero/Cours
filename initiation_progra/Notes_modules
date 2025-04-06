@@ -1,0 +1,6 @@
+import nom_bibliothèque as alias
+
+
+
+Modules utiles : 
+	-colorama -> couleur terminal
