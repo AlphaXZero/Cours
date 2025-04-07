@@ -13,7 +13,7 @@
 a|b a ou b
 
 () groupe -> c'est ça que renvoie la regex
-()-\1 fais un groupe 1
+()\1 fais appel au 1er groupe
 (?:) groupe qui capture pas
 (?="oui") ne prend que les trucs ou il y a ça après
 \d+(?<=) ne prend que les trucs oui il y a ça avant
