@@ -1,0 +1,33 @@
+^
+. n'importe quoi 1 fois
+
+[abc] n'importe quoi dans les crochets 1 fois
+[^abc] n'importe quoi à part ce qu'il y a dans les crochets 1 fois
+[a-b] [A-B] [0-9] n'importe quoi dans la range des crochets 1 fois
+\w n'importe quelle alphabet 1 fois
+\W n'importe quoi à part alphabet 1 fois
+\d n'importe quelle nombre 1 fois
+\D n'importe quoi à part nombre 1 fois
+\s n'importe quelle espace 1 fois
+\S n'importe quoi à part un espace 1 fois
+a|b a ou b
+
+() groupe -> c'est ça que renvoie la regex
+()-\1 fais un groupe 1
+(?:) groupe qui capture pas
+(?="oui") ne prend que les trucs ou il y a ça après
+\d+(?<=) ne prend que les trucs oui il y a ça avant
+(?!PM) ne prend que les trucs ou il n'y a pas ça après
+(?<!) ne prend que les trucs ou il n'y a pas ça avant
+
+/!\ "" = un character au hasard par exemple "i" ou une autre règle par exemple [abc]
+""* le caractère 0 fois ou plusieurs
+""+ le caractère 1 fois ou plusieurs
+""? le caractère ou non
+""{2} le caractère 2 fois exactement
+""{1,3} le caractère 1,2 ou 3 fois
+""{3,} le caractère au moins 3 fois
+
+
+^"" la ligne doit commencer par ça
+""$ la ligne doit terminer par ça
